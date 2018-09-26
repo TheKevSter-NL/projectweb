@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <!--data over de html (niet zichbaar op de pagina)-->
+  <title>Overzichtpagina</title>
+  <!--encoding alle mogelijke characters unicode-->
+  <meta charset="UTF-8">
+  <!--Website werkt op elke apparaat-->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--import een style sheet-->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <!--Header begin-->
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="halfblock">
+          <div class="logo">
+            <a href="index.html">  <img src="images/logo/transavialogo.png"> </a>
+          </div>
+        </div>
+        <div class="halfblock">
+          <a href="inloggen.html"><img src="images/iconen/user.svg"></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--Header end-->
+  <div id="page">
+    <section class="section_overzichtpagina_1">
+      <!--groepeert alle content in de section-->
+      <div class="container">
+        <div class="row">
+          <div class="block">
+            <h1> Verhalen </h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section_overzichtpagina_2">
+      <!--groepeert alle content in de section-->
+      <div class="container">
+        <div class="halfblock">
+          <div class="custom_default_1">
+            <div class="resultaten">
+              <h2> Resultaten </h2>
+            </div>
+            <div class="filter">
+              <form action="form.php">
+                <fieldset>
+                  <legend>Sorteren</legend>
+                  <label>
+                      <input type="radio" name="Sorteren"> Populariteit
+                   </label>
+                  <label>
+                     <input type="radio" name="Sorteren"> Reacties
+                  </label>
+                  <label>
+                    <input type="radio" name="Sorteren"> Leestijd
+                 </label>
+                </fieldset>
+                <fieldset>
+                  <legend>Thema</legend>
+                  <label>
+                      <input type="checkbox"> Horror
+                   </label>
+                  <label>
+                      <input type="checkbox"> Horror
+                   </label>
+                  <label>
+                      <input type="checkbox"> Horror
+                  </label>
+                </fieldset>
+                <fieldset>
+                  <legend>Leestijd</legend>
+                  <label>
+                      <input type="range" min="1" max="10"> Minuten
+                   </label>
+                </fieldset>
+                <button type="submit">Toepassen</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="halfblock">
+          <div class="custom_default_1">
+            <div class="searchbar">
+              <form action="form.php">
+                <label> Zoek een verhaal
+                  <input type="text" placeholder="Zoek een verhaal">
+                  <label>
+                  <button type="submit">submit</button>
+                </form>
+          </div>
+        </div>
+    </section>
+    <section class="section_overzichtpagina_3">
+      <!--groepeert alle content in de section-->
+      <div class="container">
+          <aside>
+            <div class="filter">
+              <form action="form.php">
+                <fieldset>
+                  <legend>Sorteren</legend>
+                  <label>
+                      <input type="radio" name="Sorteren"> Populariteit
+                   </label>
+                  <label>
+                     <input type="radio" name="Sorteren"> Reacties
+                  </label>
+                  <label>
+                    <input type="radio" name="Sorteren"> Leestijd
+                 </label>
+                </fieldset>
+                <fieldset>
+                  <legend>Thema</legend>
+                  <label>
+                      <input type="checkbox"> Horror
+                   </label>
+                  <label>
+                      <input type="checkbox"> Horror
+                   </label>
+                  <label>
+                      <input type="checkbox"> Horror
+                  </label>
+                </fieldset>
+                <fieldset>
+                  <legend>Leestijd</legend>
+                  <label>
+                      <input type="range" min="1" max="10"> Minuten
+                   </label>
+                </fieldset>
+                <button type="submit">Toepassen</button>
+              </form>
+            </div>
+            </aside>
+            <main>
+              <h2>Resultaten</h2>
+              <ul>
+                <li>
+                  <article>
+                    <h3>Title</h3>
+                    <p><a href="verhaal.html">Lees meer</a></p>
+                  </article>
+                </li>
+                <li>
+                  <article>
+                    <h3>Title</h3>
+                    <p><a href="verhaal.html">Lees meer</a></p>
+                  </article>
+                </li>
+                <li>
+                  <article>
+                    <h3>Title</h3>
+                    <p><a href="verhaal.html">Lees meer</a></p>
+                  </article>
+                </li>
+                <li>
+                  <article>
+                    <h3>Title</h3>
+                    <p><a href="verhaal.html">Lees meer</a></p>
+                  </article>
+                </li>
+                <li>
+                  <article>
+                    <h3>Title</h3>
+                    <p><a href="verhaal.html">Lees meer</a></p>
+                  </article>
+                </li>
+                <li>
+                  <article>
+                    <h3>Title</h3>
+                    <p><a href="verhaal.html">Lees meer</a></p>
+                  </article>
+                </li>
+              </ul>
+            </main>
+          </div>
+        </div>
+    </section>
+    </div>
+    <footer>
+    </footer </body>
+
+</html>
