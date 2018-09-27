@@ -103,21 +103,21 @@ header {
   z-index: 999;
 }
 header .halfblock:first-child img {
-    width: 200px;
+    width: 12.500em;
 }
 header .halfblock:last-child {
     position: relative;
     display: inline-block;
 }
 header .halfblock:last-child img {
-    width: 50px;
+    width: 3.125em;
     padding: 13px;
 }
 header .halfblock:last-child a {
     background-color:  #00D56E;
     border-radius: 50%;
     display: block;
-    width: 50px;
+    width: 3.125em;
     float: right;
     transition: 0.3s;
 }
@@ -142,7 +142,7 @@ header .halfblock:last-child a:hover {
 
 #page {
   position: relative;
-  min-height: 883px;
+  min-height: 55.188em;
   display: block;
 }
 
@@ -156,8 +156,8 @@ section.section_overzichtpagina_1 {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),  url(images/afbeeldingen/background1.jpg);
     background-position: center;
     background-size: cover;
-    padding: 70px 0;
-    min-height: 500px;
+    padding: 4.375em 0;
+    min-height: 31.250em;
 }
 .section_overzichtpagina_1 h1 {
     padding: 0 15px;
@@ -167,7 +167,7 @@ section.section_overzichtpagina_1 {
 
 /* SECTION 2*/
 section.section_overzichtpagina_2 {
-    padding-top: 50px;
+    padding-top: 3.125em;
 }
 
 section.section_overzichtpagina_2 .container{
@@ -217,14 +217,14 @@ section.section_overzichtpagina_3 h2 {
 }
 
 section.section_overzichtpagina_3 ul li {
-    width: 270px;
+    width: 33.3%;
     padding: 15px;
 }
 
 section.section_overzichtpagina_3 ul li article {
 
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/afbeeldingen/background1.jpg);
-    height: 240px;
+    height: 15.000em;
     padding: 15px;
     text-align: center;
     position: relative;
@@ -252,7 +252,7 @@ section.section_overzichtpagina_3 ul li article p {
     right: 0;
     bottom: 0;
     background-color: #f3e5d8;
-    padding: 25px;
+    padding: 1.563em;
     border-radius: 0 0px 1em 1em;
 
     border-top: 2px solid #000;
@@ -260,7 +260,7 @@ section.section_overzichtpagina_3 ul li article p {
 section.section_overzichtpagina_3 ul li article p a {
 
     background-color: #2800a0;
-    border-radius: 20px;
+    border-radius: 1px;
     padding: 10px 25px;
     color: #fff;
     text-decoration: none;
@@ -297,14 +297,14 @@ section.section_overzichtpagina_3 ul li article p a:hover {
     max-width: 810px;
     float: none;
     margin: 0 auto;
-    min-height: 670px;
-    padding-top: 80px;
+    min-height: 50.625em;
+    padding-top: 5.000em;
 }
 .section_inloggen_1 .block .halfblock {
 
     background-color: #FFFFFF;
     color: #000;
-    min-height: 500px;
+    min-height: 31.250em;
     padding:15px
 
 }
@@ -313,7 +313,7 @@ section.section_overzichtpagina_3 ul li article p a:hover {
 
     background-color: #F5F8FA;
     color: #000;
-    min-height: 500px;
+    min-height: 31.250em;
 
 }
 
@@ -347,9 +347,9 @@ footer p {
 /*Bij de aangegeven max-width wordt de code uitgevoerd!*/
 
 /*Desktop en laptop*/
-@media (max-width:1199px) {
+@media (max-width:80em) {
   section.section_overzichtpagina_3 ul li{
-    /*! width: 50%; */
+    width: 50%;
   }
   section.section_overzichtpagina_2 .filter{
     display: block;
@@ -369,7 +369,7 @@ footer p {
 }
 }
 /*tablets landscape mode*/
-@media (max-width:991px) {
+@media (max-width:60px) {
   nav ul li {
     width: 50%;
   }
@@ -377,11 +377,11 @@ footer p {
     width: 100%;
   }
   section.section_overzichtpagina_3 ul li{
-    /*! width: 50% */
+    width: 50%
   }
 }
 /*tablets portrait mode*/
-@media (max-width:767px) {
+@media (max-width:50em) {
   .container {
     width: 100%;
   }
@@ -398,15 +398,11 @@ footer p {
       text-align: center;
   }
 }
-/*mobile landschape mode*/
-@media (max-width:500px) {
+/*mobile */
+@media (max-width:40em) {
   section.section_overzichtpagina_3 ul li{
-    /*! width: 100% */
+    width: 100%
   }
-}
-/*mobile portrait mode*/
-@media (max-width:400px) {
-
 }
 
 /****************************/
