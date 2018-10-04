@@ -165,7 +165,7 @@ button:hover {
 
 /* SECTION 1*/
 
-section.section_overzichtpagina_1 {
+#index section:nth-child(2) {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/afbeeldingen/background1.jpg);
   background-position: center;
   background-size: cover;
@@ -173,7 +173,7 @@ section.section_overzichtpagina_1 {
   min-height: 11.25em;
 }
 
-.section_overzichtpagina_1 h1 {
+#index section:nth-child(2) h1 {
   padding: 0 15px;
   color: #fff;
 }
@@ -182,15 +182,15 @@ section.section_overzichtpagina_1 {
 
 /* SECTION 2*/
 
-section.section_overzichtpagina_2 {
+section:nth-child(3) {
   padding-top: 3.125em;
 }
 
-section.section_overzichtpagina_2 .container {
+section:nth-child(3) .container {
   padding: 0 15px;
 }
 
-section.section_overzichtpagina_2 .filter {
+section:nth-child(3) .filter {
   display: none;
 }
 
@@ -234,23 +234,23 @@ fieldset {
   border: none;
   padding: 0.5em 0em 1.5em;
 }
-section.section_overzichtpagina_3 h2 {
+section:nth-child(4) h2 {
   text-align: center;
   padding: 0 15px;
   color: #000;
 }
 
-section.section_overzichtpagina_3 ul li {
+section:nth-child(4) ul li {
   width: 50%;
   padding: 15px;
 }
-section.section_overzichtpagina_3 ul li:first-child article {
+section:nth-child(4) ul li:first-child article {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(images/afbeeldingen/onverwoestbaar.jpg);
   background-size: cover;
   background-position: center;
 }
 
-section.section_overzichtpagina_3 ul li article {
+section:nth-child(4) ul li article {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(images/afbeeldingen/background1.jpg);
   height: 15.000em;
   padding: 15px;
@@ -263,11 +263,11 @@ section.section_overzichtpagina_3 ul li article {
   width: 100%;
 }
 
-section.section_overzichtpagina_3 ul li article h3 {
+section:nth-child(4) ul li article h3 {
   color: #fff;
 }
 
-section.section_overzichtpagina_3 ul li article p {
+section:nth-child(4) ul li article p {
   position: absolute;
   left: 0;
   right: 0;
@@ -278,7 +278,7 @@ section.section_overzichtpagina_3 ul li article p {
   border-top: 2px solid #000;
 }
 
-section.section_overzichtpagina_3 ul li article p a {
+section:nth-child(4) ul li article p a {
   background-color: #2800a0;
   border-radius: 1em;
   padding: 10px 25px;
@@ -288,7 +288,7 @@ section.section_overzichtpagina_3 ul li article p a {
   transition: 0.3s ease 0s;
 }
 
-section.section_overzichtpagina_3 ul li article p a:hover {
+section:nth-child(4) ul li article p a:hover {
   background-color: #5E40B8;
 }
 
@@ -302,26 +302,26 @@ section.section_overzichtpagina_3 ul li article p a:hover {
 
 /*+++++++inloggen++++++++*/
 
-.section_inloggen_1 {
+section:nth-child(2) {
   background-color: #00D66C;
   padding-bottom: 5em;
 }
- .section_inloggen_1 .halfblock {
+ section:nth-child(2) .halfblock {
    display: flex;
    flex-direction: column;
  }
 
- .section_inloggen_1 .block .halfblock:first-child {
+ section:nth-child(2) .block .halfblock:first-child {
 
     border-radius: 1em 0em 0em 1em;
 
 }
-.section_inloggen_1 .block .halfblock:last-child {
+section:nth-child(2) .block .halfblock:last-child {
 
     border-radius: 0em 1em 1em 0em;
 
 }
-.section_inloggen_1 .block {
+section:nth-child(2) .block {
   /*! background-color: #FFFFFF; */
   color: #000;
   padding: 1em;
@@ -333,30 +333,30 @@ section.section_overzichtpagina_3 ul li article p a:hover {
   display: flex;
 }
 
-.section_inloggen_1 .block .halfblock {
+section:nth-child(2) .block .halfblock {
   background-color: #FFFFFF;
   min-height: 31.250em;
   padding: 1em 2em;
   padding-bottom: 3em;
 }
 
-.section_inloggen_1 .block .halfblock:last-child {
+section:nth-child(2) .block .halfblock:last-child {
   background-color: #F5F8FA;
   color: #000;
 }
-.section_inloggen_1 input {
+section:nth-child(2) input {
   padding: 0.9em;
   border-radius: 0.5em;
   margin-top: 1.2em;
   border-color: grey;
 }
-.section_inloggen_1 hr {
+section:nth-child(2) hr {
 
     border-color: #f6f6f6;
     width: 100%;
     margin-bottom: 2.5em;
 }
-.section_inloggen_1 label {
+section:nth-child(2) label {
 
     display: grid;
     padding: 1em 0em;
@@ -364,18 +364,18 @@ section.section_overzichtpagina_3 ul li article p a:hover {
     font-weight: bold;
     color: #000;
 }
-.section_inloggen_1 h1 {
+section:nth-child(2) h1 {
   color: #2800a0;
 }
-.section_inloggen_1 fieldset {
+section:nth-child(2) fieldset {
   color: transparent;
 }
-.section_inloggen_1 .wwvergeten {
+section:nth-child(2) .wwvergeten {
 
     padding-bottom: 2.5em;
 
 }
-.section_inloggen_1 fieldset p {
+section:nth-child(2) fieldset p {
 
     color: #3e3e3e;
     font-style: italic;
@@ -411,10 +411,10 @@ footer p {
 /*Desktop en laptop*/
 
 @media (max-width:80em) {
-  section.section_overzichtpagina_3 ul li {
+  section:nth-child(4) ul li {
     width: 50%;
   }
-  section.section_overzichtpagina_2 .filter {
+  section:nth-child(3) .filter {
     display: block;
   }
   main h2 {
@@ -441,14 +441,14 @@ footer p {
   .halfblock {
     width: 100%;
   }
-  section.section_overzichtpagina_3 ul li {
+  section:nth-child(4) ul li {
     width: 50%
   }
-  .section_inloggen_1 .block {
+  section:nth-child(2) .block {
     display: unset;
   }
-  .section_inloggen_1 .block .halfblock:first-child,
-  .section_inloggen_1 .block .halfblock:last-child {
+  section:nth-child(2) .block .halfblock:first-child,
+  section:nth-child(2) .block .halfblock:last-child {
     border-radius: 1em;
     margin: 3em 0;
 
@@ -470,7 +470,7 @@ footer p {
 /*mobile */
 
 @media (max-width:40em) {
-  section.section_overzichtpagina_3 ul li {
+  section:nth-child(4) ul li {
     width: 100%;
   }
 }
