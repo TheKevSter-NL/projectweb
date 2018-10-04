@@ -16,13 +16,6 @@ body {
   margin: 0;
 }
 
-.container {
-  max-width: 75em;
-  display: flex;
-  margin: 0 auto;
-  flex-direction: row;
-}
-
 ul {
   text-decoration: none;
   margin: 0;
@@ -47,33 +40,7 @@ img {
 }
 
 /****************************/
-
-/****************************/
-
-/*alle div class block/halfblock */
-
-.ul {
-  width: 33, 333%;
-  display: : flex;
-  flex-direction: row;
-}
-
-.halfblock {
-  width: 50%;
-  display: flex;
-  flex-direction: row;
-}
-
-.block {
-  width: 100%;
-  display: : flex;
-  flex-direction: row;
-}
-
-/****************************/
-
 /* Headings font en kleur */
-
 h1, h2, h3 {
   font-family: "Trebuchet MS";
   color: #000;
@@ -98,32 +65,47 @@ h3 {
 
 header {
   background-color: #fff;
-  padding: 15px;
+  padding: 1em;
   width: 100%;
   z-index: 999;
 }
 
-header .halfblock:first-child img {
+nav {
+  max-width: 75em;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+nav li:last-child {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+header img {
   width: 12.500em;
+  padding: 0.2em;
 }
 
-header .halfblock:last-child {
-  position: relative;
+header li:last-child img {
+  padding: 0.7em;
+  width: 3em;
 }
 
-header .halfblock:last-child img {
-  padding: 0.8em;
-}
-
-header .halfblock:last-child a {
+header li:last-child a {
   background-color: #00D56E;
   border-radius: 50%;
-  display: block;
-  width: 3.125em;
+  display: inherit;
+  width: 3em;
   transition: 0.3s;
+  height: 3em;
 }
 
-header .halfblock:last-child a:hover {
+header li:last-child a:hover {
   background-color: #2800A0;
 }
 
@@ -131,20 +113,12 @@ header .halfblock:last-child a:hover {
 
 /*filter*/
 
-.filter {
-  background-color: #00D66C;
-  color: #fff;
-  min-height: 31.7em;
-  border-radius: 1em;
-  padding: 1em;
-  border: 3px solid #000;
-}
 legend {
-
-    font-weight: bold;
-    font-size: 1.3em;
+  font-weight: bold;
+  font-size: 1.3em;
 }
-button{
+
+button {
   background-color: #FF3268;
   border-radius: 1em;
   padding: 10px 25px;
@@ -154,9 +128,11 @@ button{
   transition: 0.3s ease 0s;
   border-color: transparent;
 }
+
 button:hover {
-  background-color: #D32C58;
+  background-color: #A72044;
 }
+
 /****************************/
 
 /****************************/
@@ -169,45 +145,70 @@ button:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/afbeeldingen/background1.jpg);
   background-position: center;
   background-size: cover;
-  padding: 4.375em 0;
-  min-height: 11.25em;
+  /*! padding: 4.375em 0; */
+  height: 300px;
 }
 
 #index section:nth-child(2) h1 {
-  padding: 0 15px;
   color: #fff;
+  max-width: 75em;
+  text-align: center;
+  padding: 2.5em;
+  margin: 0 auto;
 }
 
 /****************************/
 
 /* SECTION 2*/
 
-section:nth-child(3) {
-  padding-top: 3.125em;
+#index section:nth-child(3) {
+  max-width: 75em;
+  margin: 0 auto;
+  display: grid !important;
+  grid-template-columns: auto auto;
+  padding: 3.125em 2em 0;
 }
 
-section:nth-child(3) .container {
-  padding: 0 15px;
+#index section:nth-child(3) form label {
+  display: unset;
 }
 
-section:nth-child(3) .filter {
+#index section:nth-child(3) form {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#index section:nth-child(3) label p {
   display: none;
 }
 
 /*+++++++Searchbar+++++++*/
 
-.searchbar {
-  display: flex;
-  flex-direction: row;
-}
 
-.halfblock:last-child {
-  flex-direction: row-reverse;
+#index section:nth-child(3) input {
+  height: 3em;
+  border-radius: 0.3em;
 }
 
 /****************************/
 
 /* SECTION 3*/
+
+#index section:nth-child(4) {
+  max-width: 75em;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+#index section:nth-child(4) form {
+  background-color: #00D66C;
+  color: #fff;
+  min-height: 29em;
+  border-radius: 1em;
+  padding: 1em;
+  border: 3px solid #000;
+}
 
 main {
   width: 75em;
@@ -228,31 +229,40 @@ aside {
 }
 
 label {
-  display: block;
+  display: flex;
+  flex-flow: wrap;
 }
+
 fieldset {
   border: none;
   padding: 0.5em 0em 1.5em;
 }
-section:nth-child(4) h2 {
+
+#index section:nth-child(4) {
+  padding: 0;
+}
+
+#index section:nth-child(4) h2 {
   text-align: center;
   padding: 0 15px;
   color: #000;
+  width: 100%;
 }
 
-section:nth-child(4) ul li {
+#index section:nth-child(4) ul li {
   width: 50%;
-  padding: 15px;
+  padding: 1em;
 }
-section:nth-child(4) ul li:first-child article {
+
+#index section:nth-child(4) ul li:first-child article {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(images/afbeeldingen/onverwoestbaar.jpg);
   background-size: cover;
   background-position: center;
 }
 
-section:nth-child(4) ul li article {
+#index section:nth-child(4) ul li article {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(images/afbeeldingen/background1.jpg);
-  height: 15.000em;
+  height: 21em;
   padding: 15px;
   text-align: center;
   position: relative;
@@ -263,11 +273,11 @@ section:nth-child(4) ul li article {
   width: 100%;
 }
 
-section:nth-child(4) ul li article h3 {
+#index section:nth-child(4) ul li article h3 {
   color: #fff;
 }
 
-section:nth-child(4) ul li article p {
+#index section:nth-child(4) ul li article p {
   position: absolute;
   left: 0;
   right: 0;
@@ -278,7 +288,7 @@ section:nth-child(4) ul li article p {
   border-top: 2px solid #000;
 }
 
-section:nth-child(4) ul li article p a {
+#index section:nth-child(4) ul li article p a {
   background-color: #2800a0;
   border-radius: 1em;
   padding: 10px 25px;
@@ -288,7 +298,7 @@ section:nth-child(4) ul li article p a {
   transition: 0.3s ease 0s;
 }
 
-section:nth-child(4) ul li article p a:hover {
+#index section:nth-child(4) ul li article p a:hover {
   background-color: #5E40B8;
 }
 
@@ -302,86 +312,86 @@ section:nth-child(4) ul li article p a:hover {
 
 /*+++++++inloggen++++++++*/
 
-section:nth-child(2) {
+#inloggen {
   background-color: #00D66C;
+  min-height: 61em;
+}
+
+#inloggen section:nth-child(2) {
   padding-bottom: 5em;
-}
- section:nth-child(2) .halfblock {
-   display: flex;
-   flex-direction: column;
- }
-
- section:nth-child(2) .block .halfblock:first-child {
-
-    border-radius: 1em 0em 0em 1em;
-
-}
-section:nth-child(2) .block .halfblock:last-child {
-
-    border-radius: 0em 1em 1em 0em;
-
-}
-section:nth-child(2) .block {
-  /*! background-color: #FFFFFF; */
+  max-width: 75em;
+  margin: 0 auto;
   color: #000;
-  padding: 1em;
-  max-width: 62em;
-  /*! float: none; */
+  padding: 5.6em 1em;
   margin: 0 auto;
   min-height: 30.625em;
-  padding-top: 5.000em;
   display: flex;
+  flex-direction: row;
 }
 
-section:nth-child(2) .block .halfblock {
-  background-color: #FFFFFF;
-  min-height: 31.250em;
-  padding: 1em 2em;
-  padding-bottom: 3em;
+#inloggen section:nth-child(2) main {
+  border-radius: 1em 0em 0em 1em;
+    background-color: #FFFFFF;
 }
 
-section:nth-child(2) .block .halfblock:last-child {
+#inloggen section:nth-child(2) aside {
+  border-radius: 0em 1em 1em 0em;
   background-color: #F5F8FA;
   color: #000;
 }
-section:nth-child(2) input {
+
+#inloggen section:nth-child(2) main, #inloggen section:nth-child(2) aside {
+  display: flex;
+  flex-direction: column;
+}
+
+#inloggen section:nth-child(2) main, #inloggen section:nth-child(2) aside {
+
+  min-height: 31.250em;
+  padding: 1em 2em;
+  padding-bottom: 3em;
+  width: 50%;
+}
+
+#inloggen section:nth-child(2) input {
   padding: 0.9em;
   border-radius: 0.5em;
   margin-top: 1.2em;
   border-color: grey;
 }
-section:nth-child(2) hr {
 
-    border-color: #f6f6f6;
-    width: 100%;
-    margin-bottom: 2.5em;
+#inloggen section:nth-child(2) hr {
+  border-color: #f6f6f6;
+  width: 100%;
+  margin-bottom: 2.5em;
 }
-section:nth-child(2) label {
 
-    display: grid;
-    padding: 1em 0em;
-
-    font-weight: bold;
-    color: #000;
+#inloggen section:nth-child(2) label {
+  display: grid;
+  padding: 1em 0em;
+  font-weight: bold;
+  color: #000;
 }
-section:nth-child(2) h1 {
+
+#inloggen section:nth-child(2) h1 {
   color: #2800a0;
+  margin: 1em 0;
 }
-section:nth-child(2) fieldset {
+
+#inloggen section:nth-child(2) fieldset {
   color: transparent;
 }
-section:nth-child(2) .wwvergeten {
 
-    padding-bottom: 2.5em;
-
+#inloggen section:nth-child(2) .wwvergeten {
+  padding-bottom: 2.5em;
 }
-section:nth-child(2) fieldset p {
 
-    color: #3e3e3e;
-    font-style: italic;
-    font-size: 0.8em;
-
+#inloggen section:nth-child(2) fieldset p {
+  color: #3e3e3e;
+  font-style: italic;
+  font-size: 0.8em;
 }
+
 /**********/
 
 /****************************/
@@ -395,7 +405,6 @@ footer {
   padding: 15px 0 30px;
   width: 100%;
   text-align: center;
-  margin-bottom: -5px;
 }
 
 footer p {
@@ -411,23 +420,23 @@ footer p {
 /*Desktop en laptop*/
 
 @media (max-width:80em) {
-  section:nth-child(4) ul li {
+  #index section:nth-child(4) ul li {
     width: 50%;
   }
-  section:nth-child(3) .filter {
-    display: block;
+  #index section:nth-child(3) .halfblock:first-child form {
+    display: initial;
   }
   main h2 {
-    display: block;
-    color: #000;
+    display: inherit;
+    text-align: center;
   }
-  aside {
+  #index aside {
     display: none;
   }
-  main, aside {
+  #inloggen main, aside {
     width: 100%;
   }
-  .resultaten {
+  #index section:nth-child(3)>h2 {
     display: none;
   }
 }
@@ -436,41 +445,38 @@ footer p {
 
 @media (max-width:60em) {
   nav ul li {
-    width: 50%;
-  }
-  .halfblock {
     width: 100%;
   }
-  section:nth-child(4) ul li {
+  #inloggen section:nth-child(2) {
+    flex-direction: column;
+  }
+  #inloggen section:nth-child(2) main, #inloggen section:nth-child(2) aside {
+    width: 100%;
+    margin: 2em 0;
+  }
+  #index section:nth-child(3) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #index section:nth-child(4) ul li {
     width: 50%
   }
-  section:nth-child(2) .block {
-    display: unset;
-  }
-  section:nth-child(2) .block .halfblock:first-child,
-  section:nth-child(2) .block .halfblock:last-child {
+  #inloggen section:nth-child(2) main, #inloggen section:nth-child(2) aside {
     border-radius: 1em;
     margin: 3em 0;
-
   }
 }
 
 /*tablets portrait mode*/
 
 @media (max-width:50em) {
-  .container {
-    width: 100%;
-    flex-direction: column-reverse;
-  }
-  .section_overzichtpagina_1 h1 {
-    text-align: center;
-  }
+  #index section:nth-child(2){display: none;}
 }
 
 /*mobile */
 
 @media (max-width:40em) {
-  section:nth-child(4) ul li {
+  #index section:nth-child(4) ul li {
     width: 100%;
   }
 }

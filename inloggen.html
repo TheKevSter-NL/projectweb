@@ -15,78 +15,71 @@
 <body id="inloggen">
   <!--Header begin-->
   <header>
-    <div class="container">
-      <div class="halfblock">
-        <div class="logo">
+    <nav>
+      <ul>
+        <li>
           <a href="index.html">  <img src="images/logo/transavialogo.png"> </a>
-        </div>
-      </div>
-      <div class="halfblock">
-        <nav>
+        </li>
+        <li>
           <a href="inloggen.html"><img src="images/iconen/user.svg"></a>
-        </nav>
-      </div>
-    </div>
+        </li>
+      </ul>
+    </nav>
   </header>
   <!--Header end-->
   <section>
     <!--groepeert alle content in de section-->
-    <div class="container">
-      <div class="block">
-        <div class="halfblock">
-          <h1> Log in bij mijn Transavia</h1>
-          <hr />
-          <p>
-            Vul je e-mailadres en wachtwoord in om in te loggen.
-          </p>
-          <form action="form.php">
+      <main>
+        <h1> Log in bij mijn Transavia</h1>
+        <hr />
+        <p>
+          Vul je e-mailadres en wachtwoord in om in te loggen.
+        </p>
+        <form action="form.php">
 
 
-            <fieldset>
-              <legend>Inloggen</legend>
-              <label> Email
+          <fieldset>
+            <legend>Inloggen</legend>
+            <label> Email
                     <input type="text" placeholder="gebruikerdomein.nl">
                   </label>
-              <label> Wachtwoord
+            <label> Wachtwoord
                       <input type="password">
                     </label>
-            </fieldset>
-            <p class="wwvergeten">
-              <a href="wachtwoordreset.html">Wachtwoord vergeten?</a>
-            </p>
-            <button type="submit">Inloggen</button>
-          </form>
+          </fieldset>
+          <i>
+            <a href="wachtwoordreset.html">Wachtwoord vergeten?</a>
+          </i>
+          <button type="submit">Inloggen</button>
+        </form>
 
-        </div>
-        <div class="halfblock">
-          <h1>Maak hier een account aan!</h1>
-          <hr />
-          <p>
-            Vul je e-mailadres en wachtwoord in om in te loggen.
-          </p>
-          <form action="form.php">
+      </main>
+      <aside>
 
 
-
-            <fieldset>
-              <legend>Aanmelden</legend>
-              <label> Roepnaam
+        <h1>Maak hier een account aan!</h1>
+        <hr />
+        <p>
+          Vul je e-mailadres en wachtwoord in om in te loggen.
+        </p>
+        <form action="form.php">
+          <fieldset>
+            <legend>Aanmelden</legend>
+            <label> Roepnaam
                   <input type="text" placeholder="gebruikerdomein.nl">
                 </label>
-              <p> Zo mogen we je noemen</p>
-              <label> Email
+            <p> Zo mogen we je noemen</p>
+            <label> Email
                   <input type="text" placeholder="gebruikerdomein.nl">
                 </label>
-              <label> Wachtwoord
+            <label> Wachtwoord
                     <input type="password">
                   </label>
-            </fieldset>
+          </fieldset>
 
-            <button type="submit">Klaar</button>
-          </form>
-        </div>
-      </div>
-    </div>
+          <button type="submit">Klaar</button>
+        </form>
+        </aside>
   </section>
   <footer>
   </footer>
