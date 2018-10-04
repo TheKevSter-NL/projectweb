@@ -1,7 +1,5 @@
 /*Import Google Fonts*/
 
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 /****************************/
 
 /* Preset codes toepasbaar voor elke pagina*/
@@ -19,9 +17,10 @@ body {
 }
 
 .container {
-  width: 75%;
-  display: block;
+  max-width: 75em;
+  display: flex;
   margin: 0 auto;
+  flex-direction: row;
 }
 
 ul {
@@ -32,8 +31,7 @@ ul {
 }
 
 section {
-  display: inline-block;
-  padding: 15px;
+  padding: 1em;
   width: 100%;
   margin: 0;
 }
@@ -41,7 +39,7 @@ section {
 p {
   margin: 0;
   font-size: 1em;
-  font-family: "Trebuchet MS":
+  font-family: "Trebuchet MS";
 }
 
 img {
@@ -50,24 +48,27 @@ img {
 
 /****************************/
 
-
 /****************************/
 
 /*alle div class block/halfblock */
+
 .ul {
-  width: 33,333%;
-  float:left
+  width: 33, 333%;
+  display: : flex;
+  flex-direction: row;
 }
+
 .halfblock {
   width: 50%;
-  float:left
+  display: flex;
+  flex-direction: row;
 }
 
 .block {
   width: 100%;
-  float:left
+  display: : flex;
+  flex-direction: row;
 }
-
 
 /****************************/
 
@@ -80,15 +81,15 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 2.5em;
-}
-
-h2 {
   font-size: 2em;
 }
 
-h3 {
+h2 {
   font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.2em;
 }
 
 /****************************/
@@ -98,230 +99,292 @@ h3 {
 header {
   background-color: #fff;
   padding: 15px;
-  display: inline-block;
   width: 100%;
   z-index: 999;
 }
+
 header .halfblock:first-child img {
-    width: 12.500em;
+  width: 12.500em;
 }
+
 header .halfblock:last-child {
-    position: relative;
-    display: inline-block;
+  position: relative;
 }
+
 header .halfblock:last-child img {
-    width: 3.125em;
-    padding: 13px;
+  padding: 0.8em;
 }
+
 header .halfblock:last-child a {
-    background-color:  #00D56E;
-    border-radius: 50%;
-    display: block;
-    width: 3.125em;
-    float: right;
-    transition: 0.3s;
+  background-color: #00D56E;
+  border-radius: 50%;
+  display: block;
+  width: 3.125em;
+  transition: 0.3s;
 }
+
 header .halfblock:last-child a:hover {
-    background-color:  #2800A0;
+  background-color: #2800A0;
 }
+
 /****************************/
 
 /*filter*/
+
 .filter {
-    background-color: #00D66C;
-    color: #fff;
-    min-height: 32em;
-    border-radius: 1em;
-    padding: 15px;
+  background-color: #00D66C;
+  color: #fff;
+  min-height: 31.7em;
+  border-radius: 1em;
+  padding: 1em;
+  border: 3px solid #000;
 }
+legend {
 
-
+    font-weight: bold;
+    font-size: 1.3em;
+}
+button{
+  background-color: #FF3268;
+  border-radius: 1em;
+  padding: 10px 25px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 2px 3px #000;
+  transition: 0.3s ease 0s;
+  border-color: transparent;
+}
+button:hover {
+  background-color: #D32C58;
+}
 /****************************/
-
-/* PAGE*/
-
-#page {
-  position: relative;
-  min-height: 55.188em;
-  display: block;
-}
 
 /****************************/
 
 /*+++++++INDEX PAGINA+++++++*/
 
-
 /* SECTION 1*/
+
 section.section_overzichtpagina_1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),  url(images/afbeeldingen/background1.jpg);
-    background-position: center;
-    background-size: cover;
-    padding: 4.375em 0;
-    min-height: 31.250em;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/afbeeldingen/background1.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 4.375em 0;
+  min-height: 11.25em;
 }
+
 .section_overzichtpagina_1 h1 {
-    padding: 0 15px;
-    color:#fff;
+  padding: 0 15px;
+  color: #fff;
 }
+
 /****************************/
 
 /* SECTION 2*/
+
 section.section_overzichtpagina_2 {
-    padding-top: 3.125em;
+  padding-top: 3.125em;
 }
 
-section.section_overzichtpagina_2 .container{
-  padding:0 15px;
+section.section_overzichtpagina_2 .container {
+  padding: 0 15px;
 }
 
-
-section.section_overzichtpagina_2 .filter{
+section.section_overzichtpagina_2 .filter {
   display: none;
 }
+
 /*+++++++Searchbar+++++++*/
+
 .searchbar {
-    float: right;
+  display: flex;
+  flex-direction: row;
 }
-.halfblock:last-child{
-  float:right;
+
+.halfblock:last-child {
+  flex-direction: row-reverse;
 }
+
 /****************************/
 
 /* SECTION 3*/
 
 main {
-  width: 75%;
-  display: inline-block;
+  width: 75em;
 }
-main h2 {
-    display: none;
-}
-main ul {
 
-    display: flex;
-    flex-wrap: wrap;
+main h2 {
+  display: none;
 }
+
+main ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 aside {
-  width: 25%;
-  display: inline-block;
-  float: left;
-  padding: 15px;
+  width: 25em;
+  padding: 1em;
 }
+
 label {
-    display: block;
+  display: block;
+}
+fieldset {
+  border: none;
+  padding: 0.5em 0em 1.5em;
 }
 section.section_overzichtpagina_3 h2 {
-    text-align: center;
-    padding: 0 15px;
-    color: #000;
+  text-align: center;
+  padding: 0 15px;
+  color: #000;
 }
 
 section.section_overzichtpagina_3 ul li {
-    width: 33.3%;
-    padding: 15px;
+  width: 50%;
+  padding: 15px;
+}
+section.section_overzichtpagina_3 ul li:first-child article {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(images/afbeeldingen/onverwoestbaar.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 section.section_overzichtpagina_3 ul li article {
-
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/afbeeldingen/background1.jpg);
-    height: 15.000em;
-    padding: 15px;
-    text-align: center;
-    position: relative;
-    border: 3px solid #000;
-    background-size: cover;
-    transition: 0.3s ease 0s;
-    border-radius: 1em;
-
-    width: 100%;
-}
-section.section_overzichtpagina_3 ul li article:hover {
-
-    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(images/afbeeldingen/background1.jpg);
-    transition: 0.3s ease 0s;
-
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url(images/afbeeldingen/background1.jpg);
+  height: 15.000em;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+  border: 3px solid #000;
+  background-size: cover;
+  transition: 0.3s ease 0s;
+  border-radius: 1em;
+  width: 100%;
 }
 
 section.section_overzichtpagina_3 ul li article h3 {
-  color:#fff;
+  color: #fff;
 }
+
 section.section_overzichtpagina_3 ul li article p {
-
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #f3e5d8;
-    padding: 1.563em;
-    border-radius: 0 0px 1em 1em;
-
-    border-top: 2px solid #000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f3e5d8;
+  padding: 1.563em;
+  border-radius: 0 0px 1em 1em;
+  border-top: 2px solid #000;
 }
+
 section.section_overzichtpagina_3 ul li article p a {
-
-    background-color: #2800a0;
-    border-radius: 1px;
-    padding: 10px 25px;
-    color: #fff;
-    text-decoration: none;
-    box-shadow: 2px 3px #000;
-    transition: 0.3s ease 0s;
-
+  background-color: #2800a0;
+  border-radius: 1em;
+  padding: 10px 25px;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 2px 3px #000;
+  transition: 0.3s ease 0s;
 }
+
 section.section_overzichtpagina_3 ul li article p a:hover {
-
-    background-color: #5E40B8;
-
+  background-color: #5E40B8;
 }
+
 /****************************/
 
 /*+++++++    +++++++*/
 
-
-
 /****************************/
-
 
 /****************************/
 
 /*+++++++inloggen++++++++*/
 
-.section_inloggen_1{
+.section_inloggen_1 {
   background-color: #00D66C;
+  padding-bottom: 5em;
+}
+ .section_inloggen_1 .halfblock {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .section_inloggen_1 .block .halfblock:first-child {
+
+    border-radius: 1em 0em 0em 1em;
+
+}
+.section_inloggen_1 .block .halfblock:last-child {
+
+    border-radius: 0em 1em 1em 0em;
+
 }
 .section_inloggen_1 .block {
-
-    /*! background-color: #FFFFFF; */
-    color: #000;
-    padding:15px;
-    max-width: 810px;
-    float: none;
-    margin: 0 auto;
-    min-height: 50.625em;
-    padding-top: 5.000em;
+  /*! background-color: #FFFFFF; */
+  color: #000;
+  padding: 1em;
+  max-width: 62em;
+  /*! float: none; */
+  margin: 0 auto;
+  min-height: 30.625em;
+  padding-top: 5.000em;
+  display: flex;
 }
+
 .section_inloggen_1 .block .halfblock {
-
-    background-color: #FFFFFF;
-    color: #000;
-    min-height: 31.250em;
-    padding:15px
-
+  background-color: #FFFFFF;
+  min-height: 31.250em;
+  padding: 1em 2em;
+  padding-bottom: 3em;
 }
 
 .section_inloggen_1 .block .halfblock:last-child {
+  background-color: #F5F8FA;
+  color: #000;
+}
+.section_inloggen_1 input {
+  padding: 0.9em;
+  border-radius: 0.5em;
+  margin-top: 1.2em;
+  border-color: grey;
+}
+.section_inloggen_1 hr {
 
-    background-color: #F5F8FA;
+    border-color: #f6f6f6;
+    width: 100%;
+    margin-bottom: 2.5em;
+}
+.section_inloggen_1 label {
+
+    display: grid;
+    padding: 1em 0em;
+
+    font-weight: bold;
     color: #000;
-    min-height: 31.250em;
+}
+.section_inloggen_1 h1 {
+  color: #2800a0;
+}
+.section_inloggen_1 fieldset {
+  color: transparent;
+}
+.section_inloggen_1 .wwvergeten {
+
+    padding-bottom: 2.5em;
 
 }
+.section_inloggen_1 fieldset p {
 
+    color: #3e3e3e;
+    font-style: italic;
+    font-size: 0.8em;
 
+}
 /**********/
 
 /****************************/
-
 
 /****************************/
 
@@ -330,7 +393,6 @@ section.section_overzichtpagina_3 ul li article p a:hover {
 footer {
   background-color: #F6F6F6;
   padding: 15px 0 30px;
-  display: inline-block;
   width: 100%;
   text-align: center;
   margin-bottom: -5px;
@@ -347,61 +409,69 @@ footer p {
 /*Bij de aangegeven max-width wordt de code uitgevoerd!*/
 
 /*Desktop en laptop*/
+
 @media (max-width:80em) {
-  section.section_overzichtpagina_3 ul li{
+  section.section_overzichtpagina_3 ul li {
     width: 50%;
   }
-  section.section_overzichtpagina_2 .filter{
+  section.section_overzichtpagina_2 .filter {
     display: block;
   }
   main h2 {
-      display: block;
-      color: #000;
+    display: block;
+    color: #000;
   }
-  aside .filter {
+  aside {
     display: none;
   }
-  main , aside {
+  main, aside {
     width: 100%;
   }
   .resultaten {
     display: none;
+  }
 }
-}
+
 /*tablets landscape mode*/
-@media (max-width:60px) {
+
+@media (max-width:60em) {
   nav ul li {
     width: 50%;
   }
   .halfblock {
     width: 100%;
   }
-  section.section_overzichtpagina_3 ul li{
+  section.section_overzichtpagina_3 ul li {
     width: 50%
   }
+  .section_inloggen_1 .block {
+    display: unset;
+  }
+  .section_inloggen_1 .block .halfblock:first-child,
+  .section_inloggen_1 .block .halfblock:last-child {
+    border-radius: 1em;
+    margin: 3em 0;
+
+  }
 }
+
 /*tablets portrait mode*/
+
 @media (max-width:50em) {
   .container {
     width: 100%;
-  }
-  h1 {
-    font-size: 2em;
-  }
-  h2 {
-    font-size: 1.5em;
-  }
-  h3 {
-    font-size: 1.3em;
+    flex-direction: column-reverse;
   }
   .section_overzichtpagina_1 h1 {
-      text-align: center;
+    text-align: center;
   }
 }
+
 /*mobile */
+
 @media (max-width:40em) {
-  section.section_overzichtpagina_3 ul li{
-    width: 100%
+  section.section_overzichtpagina_3 ul li {
+    width: 100%;
   }
 }
 

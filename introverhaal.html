@@ -3,7 +3,7 @@
 
 <head>
   <!--data over de html (niet zichbaar op de pagina)-->
-  <title>Reisverhalen</title>
+  <title>Overzichtpagina</title>
   <!--encoding alle mogelijke characters unicode-->
   <meta charset="UTF-8">
   <!--Website werkt op elke apparaat-->
@@ -16,16 +16,16 @@
   <!--Header begin-->
   <header>
     <div class="container">
-      <div class="halfblock">
-        <div class="logo">
-          <a href="index.html">  <img src="images/logo/transavialogo.png"> </a>
+        <div class="halfblock">
+          <div class="logo">
+            <a href="index.html">  <img src="images/logo/transavialogo.png"> </a>
+          </div>
         </div>
-      </div>
-      <div class="halfblock">
-        <nav>
-          <a href="inloggen.html"><img src="images/iconen/user.svg"></a>
-        </nav>
-      </div>
+        <div class="halfblock">
+          <nav>
+            <a href="inloggen.html"><img src="images/iconen/user.svg"></a>
+          </nav>
+        </div>
     </div>
   </header>
   <!--Header end-->
@@ -36,44 +36,42 @@
         <div class="halfblock">
           <h1> Log in bij mijn Transavia</h1>
           <hr />
-          <p>
-            Vul je e-mailadres en wachtwoord in om in te loggen.
-          </p>
-          <form action="form.php">
+            <form action="form.php">
 
-
-            <fieldset>
-              <legend>Inloggen</legend>
-              <label> Email
+              <p>
+                Vul je e-mailadres en wachtwoord in om in te loggen.
+              </p>
+              <fieldset>
+                <legend>Inloggen</legend>
+                <label> Email
                     <input type="text" placeholder="gebruikerdomein.nl">
                   </label>
-              <label> Wachtwoord
+                <label> Wachtwoord
                       <input type="password">
                     </label>
-            </fieldset>
-            <p class="wwvergeten">
-              <a href="wachtwoordreset.html">Wachtwoord vergeten?</a>
-            </p>
-            <button type="submit">Inloggen</button>
-          </form>
+              </fieldset>
+              <p>
+                <a href="wachtwoordreset.html">Wachtwoord vergeten?</a>
 
+              </p>
+              <button type="submit">Toepassen</button>
+            </form>
+            <p>
+              Heb je nog geen account?<a href="wachtwoordreset.html">Meld je nu aan!</a>
+
+            </p>
         </div>
         <div class="halfblock">
-          <h1>Maak hier een account aan!</h1>
-          <hr />
-          <p>
-            Vul je e-mailadres en wachtwoord in om in te loggen.
-          </p>
+          <h1> Log in bij mijn Transavia</h1>
+                  <hr />
           <form action="form.php">
 
 
-
+            <p>
+              Vul je e-mailadres en wachtwoord in om in te loggen.
+            </p>
             <fieldset>
-              <legend>Aanmelden</legend>
-              <label> Roepnaam
-                  <input type="text" placeholder="gebruikerdomein.nl">
-                </label>
-              <p> Zo mogen we je noemen</p>
+              <legend>Inloggen</legend>
               <label> Email
                   <input type="text" placeholder="gebruikerdomein.nl">
                 </label>
@@ -81,8 +79,11 @@
                     <input type="password">
                   </label>
             </fieldset>
+            <p>
+              <a href="wachtwoordreset.html">Wachtwoord vergeten?</a>
 
-            <button type="submit">Klaar</button>
+            </p>
+            <button type="submit">Toepassen</button>
           </form>
         </div>
       </div>
