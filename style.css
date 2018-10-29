@@ -199,9 +199,8 @@ form button:hover {
 
 #index>section:nth-child(2) h1 {
   color: #fff;
-  /*! max-width: 75em; */
   text-align: left;
-  padding: 1.5em 2.5em;
+  padding: 1.5em 0em;
   margin: 0 3em;
 }
 
