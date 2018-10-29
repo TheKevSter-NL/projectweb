@@ -652,13 +652,25 @@ form button:hover {
 }
 /*+++++++Verhaal +++++++*/
 
-
+#verhaal header{
+  position: fixed;
+}
 #verhaal section{
   padding: 0;
   max-width: 75em;
   margin: 0 auto;
+  position: relative;
+  top: 5em;
 }
+#verhaal section img:nth-child(2) {
 
+    position: fixed;
+    top: 4em;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}
 #verhaal section img:nth-child(4) {
   display: none;
 }
