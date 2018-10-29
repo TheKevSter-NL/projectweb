@@ -489,6 +489,7 @@ main footer b {
   position: relative;
   margin: 0 auto;
   max-width: 75em;
+  padding: 0em 1em 2em;
 }
 
 #index div button {
