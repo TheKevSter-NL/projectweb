@@ -658,10 +658,8 @@ form button:hover {
   max-width: 75em;
   margin: 0 auto;
 }
-#verhaal section img:first-child {
 
-}
-#verhaal section img:nth-child(3) {
+#verhaal section img:nth-child(4) {
   display: none;
 }
 #verhaal section img:last-child {
@@ -807,11 +805,11 @@ margin: 0;
     border-radius: 1em;
     margin: 3em 0;
   }
-  #verhaal section img:nth-child(2){
+  #verhaal section img:nth-child(3){
     display: none;
     height: 0;
   }
-  #verhaal section img:nth-child(3) {
+  #verhaal section img:nth-child(4) {
     display: block;
   }
   #fav section:nth-child(2) ul li{
@@ -854,7 +852,7 @@ margin: 0;
   }
   #index section:nth-child(5) {
     text-align: center;
-  }#verhaal section img:nth-child(3) {
+  }#verhaal section img:nth-child(4) {
     display: none;
     height: 0;
   }
