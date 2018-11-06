@@ -267,7 +267,7 @@ form button:hover {
 }
 
 #index>section:nth-child(2) article img {
-  margin: 0 0 -8px 0;
+  /* margin: 0 0 -8px 0; */
 }
 
 #index>section:nth-child(2) article {
@@ -339,7 +339,9 @@ form button:hover {
 #index section:nth-child(3) input {
   border-radius: 1em;
 }
-
+#index section:nth-child(3) input[type="text"]::placeholder {
+    color: #fff;
+}
 #index section:nth-child(3) .sortfilter.sortfilteractive input {
   height: 1em;
 }
@@ -426,7 +428,7 @@ main footer li:nth-child(2), #fav main footer li:nth-child(2) {
 }
 
 main ul li article, #fav main ul li article, #index>section:nth-child(2) article {
-  height: 22em;
+  /* height: 22em; */
   padding: 0;
   text-align: center;
   position: relative;
