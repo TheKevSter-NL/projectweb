@@ -25,7 +25,7 @@
           <p><a href="index.html">  <img src="images/logo/transavia-logo.png" alt="transavialogo"></a></p>
         </li>
         <li>
-          <p><a href="fav.html"><img src="images/iconen/star.png" alt="nav ster"></a></p>
+          <p class="navfav , navdownload"><a href="fav.html"><img src="images/iconen/star.png" alt="nav ster"></a></p>
         </li>
         <li>
           <p><a href="inloggen.html"><img src="images/iconen/user.svg" alt="nav inlog" ></a></p>
@@ -35,9 +35,32 @@
   </header>
   <!--Header end-->
   <section>
-    <!--groepeert alle content in de section-->
+    <ul>
+      <li>
     <h1> 99 Reisverhalen </h1>
+    </li>
+    <li>
 
+    <article>
+      <h2>Aanbevolen Verhaal Zombie</h2>
+      <img src="images/afbeeldingen/onverwoestbaar.jpg" alt="verhaal banner">
+      <footer>
+        <ul>
+          <li><img src="images/iconen/glasses.svg" alt="leestijd">
+            <p> 5min</p>
+          </li>
+          <li> <button class="favbutton"> Favorieten button </button>
+            <b> 60</b>
+          </li>
+          <li> <button class="downloadbutton"> Download button </button>
+            <b> Download</b>
+          </li>
+        </ul>
+      </footer>
+      <p><a href="introverhaal.html">Bekijk het verhaal zombie</a></p>
+    </article>
+  </li>
+  </ul>
   </section>
   <section>
     <!--groepeert alle content in de section-->
@@ -94,6 +117,7 @@
 
     <form action="filter.html" id="zoekmachine">
       <input placeholder="Zoek een verhaal" type="text">
+
     </form>
   </section>
   <main>
@@ -158,10 +182,10 @@
                 <li><img src="images/iconen/glasses.svg" alt="leestijd">
                   <p> 5min</p>
                 </li>
-                <li> <button> Favorieten button </button>
+                <li> <button class="favbutton"> Favorieten button </button>
                   <b> 60</b>
                 </li>
-                <li> <button> Download button </button>
+                <li> <button class="downloadbutton"> Download button </button>
                   <b> Download</b>
                 </li>
               </ul>
@@ -178,10 +202,10 @@
                 <li><img src="images/iconen/glasses.svg" alt="leestijd">
                   <p> 1min</p>
                 </li>
-                <li> <button> Favorieten button </button>
-                  <b> 60</b>
+                <li> <button class="favbutton"> Favorieten button </button>
+                  <b> 55</b>
                 </li>
-                <li> <button> Download button </button>
+                <li> <button class="downloadbutton"> Download button </button>
                   <b> Download</b>
                 </li>
               </ul>
@@ -189,13 +213,41 @@
             <p><a href="introverhaal.html">Bekijk het verhaal haiku</a></p>
           </article>
         </li>
+        <li>
+          <article>
+            <h3>Vrijdag de 13de</h3>
+
+            <img src="images/afbeeldingen/vrijdagde13epreview.jpeg" alt="Vrijdag de 13de verhaal">
+            <footer>
+              <ul>
+                <li><img src="images/iconen/glasses.svg" alt="leestijd">
+                  <p> 10min</p>
+                </li>
+                <li> <button class="favbutton"> Favorieten button </button>
+                  <b> 40</b>
+                </li>
+                <li> <button class="downloadbutton"> Download button </button>
+                  <b> Download</b>
+                </li>
+              </ul>
+            </footer>
+            <p><a href="introverhaal.html">Bekijk het verhaal vrijdag de 13de</a></p>
+          </article>
+        </li>
+      
       </ul>
+      <div>
+        <button> Zie meer verhalen </button>
+      </div>
     </section>
+
   </main>
-  <div>
-    <button> Zie meer verhalen </button>
-  </div>
+
+  <script src="js/fav.js"></script>
+  <script src="js/download.js"></script>
   <script src="js/filter.js"></script>
+
+
 </body>
 
 </html>

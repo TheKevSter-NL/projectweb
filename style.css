@@ -10,6 +10,7 @@
 
 html {
   background-color: #fff;
+  font-family: "Trebuchet MS";
 }
 
 body {
@@ -58,7 +59,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7em;
+  font-size: 2em;
   margin: 0;
   color: #00D66C;
 }
@@ -88,6 +89,8 @@ aside {
 label {
   display: flex;
   flex-flow: wrap;
+  line-height: 1.5em;
+  color: #000;
 }
 
 fieldset {
@@ -146,10 +149,57 @@ header li:nth-child(2) a, header li:last-child a {
   transition: 0.3s;
   height: 3em;
   margin: 0 auto;
+  z-index: 999;
 }
 
 header li:nth-child(2) a:hover, header li:last-child a:hover {
   background-color: #2800A0;
+}
+
+.navfav {
+  transition: all 0.7s;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.navfav.favactive, .navdownload.downloadactive {
+  position: relative;
+  transition: all 0.7s;
+  opacity: 1;
+}
+
+.navfav::after, .navdownload::before {
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: 0.8em;
+  transition: all 0.7s;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  max-width: 6em;
+  margin: 0 auto;
+  z-index: -1;
+}
+
+.navdownload::before {
+  background-position: 100% 0em;
+}
+
+.navfav.favactive::after {
+  opacity: 1;
+  background-image: url(" images/iconen/starliked.svg");
+  transform: rotate(360deg);
+  z-index: -1;
+}
+
+.navdownload.downloadactive::before {
+  opacity: 1;
+  background-image: url(" images/iconen/vinkje.svg");
+  transform: rotate(-360deg);
 }
 
 /****************************/
@@ -194,14 +244,34 @@ form button:hover {
   background-position: center;
   background-size: cover;
   padding: 4.375em 0;
-  min-height: 300px;
+  min-height: 25em;
+}
+
+#index>section:nth-child(2)>ul {
+  display: flex;
+  max-width: 75em;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+#index>section:nth-child(2)>ul li {
+  width: 50%;
+  padding: 0 1em;
 }
 
 #index>section:nth-child(2) h1 {
   color: #fff;
   text-align: left;
-  padding: 1.5em 3em;
-  margin: 0 3em;
+  padding: 1em 0em 0em;
+}
+
+#index>section:nth-child(2) article img {
+  margin: 0 0 -8px 0;
+}
+
+#index>section:nth-child(2) article {
+  max-width: 25.8em;
+  margin-left: auto;
 }
 
 /****************************/
@@ -212,7 +282,7 @@ form button:hover {
   max-width: 75em;
   margin: 0 auto;
   grid-template-columns: auto auto;
-  padding: 3.125em 2em 0;
+  padding: 3em 2em 2em;
   display: grid;
 }
 
@@ -330,7 +400,7 @@ main, #fav main {
   min-height: 29em;
   border-radius: 1em;
   padding: 1em;
-  border: 3px solid #000;
+  border: 3px solid #F3E5D8;
 }
 
 main section, #fav main {
@@ -344,60 +414,63 @@ main h2 {
   width: 100%;
 }
 
-main ul li {
+main ul li, #index>section:nth-child(2) article ul li {
   width: 50%;
   padding: 1em;
 }
 
 main footer li:nth-child(2), #fav main footer li:nth-child(2) {
-  border-left: 3px solid #000;
-  border-right: 3px solid #000;
+  /*! border-left: 3px solid #000; */
+  /*! border-right: 3px solid #000; */
 }
 
-main ul li article, #fav main ul li article {
-  height: 21.5em;
+main ul li article, #fav main ul li article, #index>section:nth-child(2) article {
+  height: 22.4em;
   padding: 0;
   text-align: center;
   position: relative;
-  border: 3px solid #000;
+  /*! border: 3px solid transparent; */
   background-size: cover;
   transition: 0.3s ease 0s;
   border-radius: 1em;
   width: 100%;
   background-color: #00D66C;
-  background-position: center;
 }
 
-main ul li article img, #fav main ul li article img {
+main ul li article img, #fav main ul li article img, #index>section:nth-child(2) img {
   object-fit: cover;
-  height: 11.4em;
+  height: 13.4em;
+  margin: 0 0-4px 0;
+  padding: 0;
+  position: relative;
 }
 
-main ul li article h3, #fav main ul li article h2 {
+main ul li article h3, #fav main ul li article h2, #index>section:nth-child(2) article h2 {
   color: #fff;
   font-size: 1.4em;
   text-align: left;
-  padding: 0 1em;
+  padding: 1em;
   position: relative;
   transition: all 0.3s;
   display: inherit;
-  margin: 1em 0;
+  margin: 0;
+  z-index: 1;
 }
 
-main ul li article:hover h3, #fav main ul li article:hover h2 {
+main ul li article:hover h3, #fav main ul li article:hover h2, #index>section:nth-child(2) article:hover h2 {
   margin-left: 1em;
 }
 
-main ul li article>p, #fav main ul li article>p {
+main ul li article>p, #fav main ul li article>p, #index>section:nth-child(2) article>p {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 4.9em;
+  bottom: 4.6em;
   top: 0;
   color: transparent;
 }
 
-main ul li article p a, #fav main ul li article p a {
+main ul li article p a, #fav main ul li article p a, #index>section:nth-child(2) article p a {
   position: absolute;
   left: 0;
   right: 0;
@@ -406,25 +479,37 @@ main ul li article p a, #fav main ul li article p a {
   color: transparent;
 }
 
-main ul li article p a:hover, #fav main ul li article p a:hover {
+main ul li article p a:hover, #fav main ul li article p a:hover, #index>section:nth-child(2) article p a:hover {
   transform: scale(1.01, 1.01);
 }
 
-main footer ul li, #fav section:nth-child(4) footer ul li {
+footer ul li, #fav section:nth-child(4) footer ul li, #index>section:nth-child(2) article footer ul li {
   width: 100%;
 }
 
-main ul li article footer img, #fav main ul li article footer img {
+footer li:first-child {
+  background-color: #FF3268;
+  border-radius: 0em 0em 0em 1em;
+}
+
+footer li:nth-child(2) {
+  background-color: #FF3268;
+  border-radius: 0em 0em 0em 0em;
+}
+
+footer li:last-child {
+  background-color: #FF3268;
+  border-radius: 0em 0em 1em 0em;
+}
+
+main ul li article footer img, #fav main ul li article footer img, #index>section:nth-child(2) article footer img {
   width: 1.5em;
   height: 1.5em;
 }
 
-main ul li article footer ul li button:hover, #fav main ul li article footer ul li button:hover {
-  height: 2em;
-  width: 2em;
-}
+main ul li article footer ul li button:hover, #fav main ul li article footer ul li button:hover {}
 
-main ul li article footer ul li button, #fav main ul li article footer ul li button {
+main ul li article footer ul li button, #fav main ul li article footer ul li button, #index>section:nth-child(2) article footer ul li button {
   color: transparent;
   position: relative;
   width: 1em;
@@ -442,48 +527,49 @@ main ul li article footer ul li button, #fav main ul li article footer ul li but
   outline: none;
 }
 
-main ul li article footer ul li:nth-child(2) button, #fav main ul li article footer ul li:nth-child(2) button {
+main ul li article footer ul li:nth-child(2) button, #fav main ul li article footer ul li:nth-child(2) button, #index>section:nth-child(2) article footer ul li:nth-child(2) button {
   background-image: url(" images/iconen/star.svg");
 }
 
-main ul li article footer ul li:nth-child(3) button, #fav main ul li article footer ul li:nth-child(3) button {
+main ul li article footer ul li:nth-child(3) button, #fav main ul li article footer ul li:nth-child(3) button, #index>section:nth-child(2) article footer ul li:nth-child(3) button {
   background-image: url(" images/iconen/download.svg");
 }
 
-main ul li article footer ul li button:active, #fav main ul li article footer ul li button:active {
+main ul li article footer ul li button:active, #fav main ul li article footer ul li button:active, #index>section:nth-child(2) article footer ul li button:active {
   border-radius: 1em;
   background-size: 1em;
   background-repeat: no-repeat;
   transform: rotate(360deg);
 }
 
-main ul li article footer ul li:nth-child(2) button:active, #fav main ul li article footer ul li:nth-child(2) button:active {
+main ul li article footer ul li:nth-child(2) button:active, #fav main ul li article footer ul li:nth-child(2) button:active, #index>section:nth-child(2) article footer ul li:nth-child(2) button:active {
   background-image: url(" images/iconen/starliked.svg");
   background-size: 1.7em;
 }
 
-main ul li article footer ul li:nth-child(3) button:active, #fav main ul li article footer ul li:nth-child(3) button:active {
+main ul li article footer ul li:nth-child(3) button:active, #fav main ul li article footer ul li:nth-child(3) button:active, #index>section:nth-child(2) article footer ul li:nth-child(3) button:active {
   background-image: url(" images/iconen/vinkje.svg");
   background-color: #fff;
 }
 
-main footer ul, #fav main footer ul {
+main footer ul, #fav main footer ul, #index>section:nth-child(2) article footer ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
   margin: 0 auto;
+  border-radius: 0 0 1em 1em;
 }
 
-main footer li {
+main footer ul li, #index>section:nth-child(2) article footer ul li {
   width: 100%;
 }
 
-main footer b {
+main footer b, #index>section:nth-child(2) article footer ul {
   position: relative;
   top: 0.2em;
 }
 
-#index div {
+#index main div {
   /*! background-color: #F3E5D8; */
   text-align: right;
   position: relative;
@@ -492,7 +578,7 @@ main footer b {
   padding: 0em 1em 2em;
 }
 
-#index div button {
+#index main div button {
   border-radius: 1em;
   padding: 15px 25px;
   background-color: #2800A0;
@@ -502,7 +588,7 @@ main footer b {
   transition: all 0.3s;
 }
 
-#index div button:hover {
+#index main div button:hover {
   background-color: #5E40B8;
 }
 
@@ -673,6 +759,8 @@ footer {
   width: 100%;
   text-align: center;
   color: #fff;
+  padding: 0;
+  margin: 0;
 }
 
 footer p {
@@ -691,21 +779,24 @@ footer p {
   header {
     position: fixed;
   }
-  #verhaal section {
-    max-width: 100%;
-  }
-  #index section:nth-child(3) .halfblock:first-child form {
-    display: initial;
+  h1 {
+    font-size: 3em;
   }
   main h2 {
     display: inherit;
     text-align: center;
   }
+  main ul li, #fav section:nth-child(4) ul li {
+    width: 33.33%;
+  }
+  #index>section:nth-child(2) {
+    padding: 9.375em 0 4.375em;
+  }
   #index aside {
     display: none;
   }
-  #inloggen main, aside {
-    width: 100%;
+  #index section:nth-child(3) .halfblock:first-child form {
+    display: initial;
   }
   #index section:nth-child(3)>h2 {
     text-align: center;
@@ -735,16 +826,11 @@ footer p {
     grid-template-columns: unset;
     padding: 3.125em 1em 0;
   }
-  main ul li, #fav section:nth-child(4) ul li {
-    width: 33.33%;
+  #inloggen main, aside {
+    width: 100%;
   }
-  h1 {
-    font-size: 2.5em;
-  }
-  #index>section:nth-child(2) h1 {
-    text-align: center;
-    padding: 2em 1em;
-    margin: 0;
+  #verhaal section {
+    max-width: 100%;
   }
 }
 
@@ -753,10 +839,19 @@ footer p {
 @media (max-width:60em) {
   #verhaal section {
     top: 5.6em;
-}
+  }
   #index section:nth-child(3) {
     position: relative;
     padding-top: 105px;
+  }
+  #index>section:nth-child(2) li {
+    max-width: 100%;
+    flex-direction: row;
+    margin: 0;
+    padding: 0 1em;
+  }
+  #index>section:nth-child(2) article {
+    margin: auto;
   }
   nav ul li {
     width: 100%;
@@ -771,15 +866,15 @@ footer p {
   nav ul li:first-child p:last-child {
     display: unset;
   }
+  main ul li, #fav section:nth-child(4) ul li {
+    width: 50%;
+  }
   #inloggen main {
     flex-direction: column;
   }
   #inloggen main section, #inloggen main aside {
     width: 100%;
     margin: 2em 0;
-  }
-  main ul li, #fav section:nth-child(4) ul li {
-    width: 50%;
   }
   #inloggen main section, #inloggen main aside {
     border-radius: 1em;
@@ -798,13 +893,26 @@ footer p {
   #fav main h1 {
     margin-top: 3em;
   }
+  .navdownload::before {
+    background-position: 100% 0em;
+  }
 }
 
 /*tablets portrait mode*/
 
 @media (max-width:50em) {
   #index>section:nth-child(2) {
-    display: none;
+    padding: 4.375em 0 4.375em;
+  }
+  #index>section:nth-child(2)>ul {
+    flex-direction: column;
+  }
+  #index>section:nth-child(2)>ul li {
+    width: 100%;
+    padding: 0 1em;
+  }
+  #index>section:nth-child(2) h1 {
+    text-align: center;
   }
   main ul li article, #fav main ul li article {
     max-width: 25em;
