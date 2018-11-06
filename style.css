@@ -426,7 +426,7 @@ main footer li:nth-child(2), #fav main footer li:nth-child(2) {
 }
 
 main ul li article, #fav main ul li article, #index>section:nth-child(2) article {
-  height: 22.4em;
+  height: 22em;
   padding: 0;
   text-align: center;
   position: relative;
@@ -567,7 +567,7 @@ main footer ul li, #index>section:nth-child(2) article footer ul li {
 
 main footer b, #index>section:nth-child(2) article footer ul {
   position: relative;
-  top: 0.2em;
+  /* top: 0.2em; */
 }
 
 #index main div {
